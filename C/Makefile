@@ -1,0 +1,30 @@
+CFLAGS = -g
+
+all: floats functions integers operations pointers source structs_unions_enums_typedefs_switch
+
+floats: floats.c
+	gcc -o floats floats.c $(CFLAGS)
+
+functions: functions.c
+	gcc -o functions functions.c $(CFLAGS)
+
+integers: integers.c
+	gcc -o integers integers.c $(CFLAGS)
+
+lib.o: lib.c
+	gcc -c lib.c $(CFLAGS)
+
+operations: operations.c
+	gcc -o operations operations.c $(CFLAGS)
+
+pointers: pointers.c
+	gcc -o pointers pointers.c $(CFLAGS)
+
+source: source.o lib.o
+	gcc -o source source.o lib.o $(CFLAGS)
+
+source.o: source.c
+	gcc -c source.c $(CFLAGS)
+
+structs_unions_enums_typedefs_switch: structs_unions_enums_typedefs_switch.c
+	gcc -o structs_unions_enums_typedefs_switch structs_unions_enums_typedefs_switch.c $(CFLAGS)
