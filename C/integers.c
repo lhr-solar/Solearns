@@ -15,8 +15,9 @@ char byte;      // This can also represent an ASCII character
 uint8_t a = 200U;
 int8_t b;
 
+// we can have variables or constants
 uint16_t c;
-int16_t d = 12;
+const int16_t d = 12;
 
 uint32_t e;
 int32_t f = 1000000;
@@ -24,14 +25,15 @@ int32_t f = 1000000;
 uint64_t g;
 int64_t h;
 
+// all C programs start at main
 int main(void) {
     int i;
 
-    b = 2;
+    b = 2;      // set b to 2
 
     printf("%d\n", b);
 
-    c = a + b;
+    c = a + b;  // set c to the sum of a and b
 
     printf("%d\n", c);
 

@@ -1,12 +1,12 @@
 CFLAGS = -g
 
-all: floats functions integers operations pointers source structs_unions_enums_typedefs_switch
+all: floats program_flow integers operations pointers source user_types
 
 floats: floats.c
 	gcc -o floats floats.c $(CFLAGS)
 
-functions: functions.c
-	gcc -o functions functions.c $(CFLAGS)
+program_flow: program_flow.c
+	gcc -o program_flow program_flow.c $(CFLAGS)
 
 integers: integers.c
 	gcc -o integers integers.c $(CFLAGS)
@@ -26,5 +26,5 @@ source: source.o lib.o
 source.o: source.c
 	gcc -c source.c $(CFLAGS)
 
-structs_unions_enums_typedefs_switch: structs_unions_enums_typedefs_switch.c
-	gcc -o structs_unions_enums_typedefs_switch structs_unions_enums_typedefs_switch.c $(CFLAGS)
+user_types: user_types.c
+	gcc -o user_types user_types.c $(CFLAGS)

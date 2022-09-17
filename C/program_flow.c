@@ -12,7 +12,7 @@ int findMax(int *arr, int len) {
             max = arr[i];
         }
     }
-    return max;
+    return max;     // return the maximum value we found
 }
 
 // determine if two null-terminated strings are equal
@@ -34,10 +34,11 @@ int stringEquals(char *s1, char *s2) {
 
 int main(void) {
 
-    int nums[] = {2, 4, 1, 7, 4};
-    char hello2[] = "hello";
-    char letters[] = {'h', 'e', 'l', '\0'};
+    int nums[] = {2, 4, 1, 7, 4};               // we can declare an array like this
+    char hello2[] = "hello";                    // we can decalre a string like this
+    char letters[] = {'h', 'e', 'l', '\0'};     // we can also declare a string like an array
 
+    // call the functions we defined above
     printf("%d\n", findMax(nums, 5));
     printf("%d\n", stringEquals(hello1, hello2));
     printf("%d\n", stringEquals(hello1, letters));
