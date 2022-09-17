@@ -1,0 +1,8 @@
+**/*.o
+C/floats
+C/functions
+C/integers
+C/operations
+C/pointers
+C/source
+C/structs_unions_enums_typedefs_switch
